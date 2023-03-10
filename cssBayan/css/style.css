@@ -118,6 +118,29 @@ h6 {
 	color: #043fd0;
 	font-weight: 700;
 }
+.accordion-list:hover {
+	color: #000;
+}
+ .accordion-list:hover .accordion-list-item {
+	background: url("../assets/svg/plus.svg") right 10px/32px 32px no-repeat;
+}
+ 
+.accordion-list-item:hover {
+	cursor: pointer;
+	background: url("../assets/svg/cross.svg") right 10px/32px 32px no-repeat;
+}
+ .accordion-list-item:focus {
+	color: #000;
+}
+.accordion-list-item:hover .accordion-list-item__content, .accordion-list-item:focus .accordion-list-item__content {
+	width: 300px;
+	height: auto;
+	margin: 0px auto 20px auto;
+}
+ .accordion-list-item:hover .accordion-list-item__content img, .accordion-list-item:focus .accordion-list-item__content img {
+	width: 300px;
+	height: 300px;
+}
 .accordion-list-item__divider {
 	width: 100%;
 	height: 1px;
