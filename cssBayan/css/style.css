@@ -91,70 +91,152 @@ h6 {
 }
 @media (max-width: 812px) {
 	.container {
-	  max-width: 970px;
+	  max-width: 750px;
 	}
 }
-@media (max-width: 992.98px) {
+@media (max-width: 992px) {
 	.container {
 	  max-width: 750px;
 	}
 }
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
 	.container {
-	  max-width: none;
+	  max-width: 600px;
 	  padding: 0 10px;
 	}
 }
+@media (max-width: 600px) {
+	.container {
+	  max-width: 400px;
+	  padding: 0 10px;
+	}
+}
+@media (max-width: 480px) {
+	.container {
+	  max-width: 300px;
+	  padding: 0 10px;
+	}
+}
+
 .accordion {
 	padding: 150px 0px 0px 0px;
 }
- .accordion__title {
+.accordion__title {
 	font-size: 35px;
 	font-weight: 700;
 }
-
+@media (max-width: 600px) {
+	.accordion__title {
+	  font-size: 30px;
+	}
+}
+@media (max-width: 480px) {
+	.accordion__title {
+	  font-size: 25px;
+	}
+}
+ 
 .accordion-list {
 	padding: 20px 0px 0px 0px;
 	color: #043fd0;
 	font-weight: 700;
 }
+@media (max-width: 480px) {
+	.accordion-list {
+	  padding: 15px 0px 0px 0px;
+	}
+}
 .accordion-list:hover {
 	color: #000;
 }
- .accordion-list:hover .accordion-list-item {
-	background: url("../assets/svg/plus.svg") right 10px/32px 32px no-repeat;
+.accordion-list:hover .accordion-list-item__title {
+	background: url("../assets/svg/plus.svg") right 7px/32px 32px no-repeat;
+}
+@media (max-width: 480px) {
+	.accordion-list:hover .accordion-list-item__title {
+	  background: url("../assets/svg/plus.svg") right 7px/25px 25px no-repeat;
+	}
+}
+.accordion-list:hover .accordion-list-item:focus {
+	background: url("../assets/svg/cross.svg") right 10px/32px 32px no-repeat;
+}
+@media (max-width: 480px) {
+	.accordion-list:hover .accordion-list-item:focus {
+	  background: url("../assets/svg/cross.svg") right 8px/25px 25px no-repeat;
+	}
+}
+.accordion-list:hover .accordion-list-item:focus .accordion-list-item__title {
+	background: none;
 }
  
 .accordion-list-item:hover {
 	cursor: pointer;
+}
+.accordion-list-item:hover .accordion-list-item__title {
 	background: url("../assets/svg/cross.svg") right 10px/32px 32px no-repeat;
 }
- .accordion-list-item:focus {
+@media (max-width: 480px) {
+	.accordion-list-item:hover .accordion-list-item__title {
+	  background: url("../assets/svg/cross.svg") right 8px/25px 25px no-repeat;
+	}
+}
+.accordion-list-item:focus {
 	color: #000;
 }
 .accordion-list-item:hover .accordion-list-item__content, .accordion-list-item:focus .accordion-list-item__content {
-	width: 300px;
-	height: auto;
+	height: 300px;
 	margin: 0px auto 20px auto;
 }
- .accordion-list-item:hover .accordion-list-item__content img, .accordion-list-item:focus .accordion-list-item__content img {
-	width: 300px;
+@media (max-width: 600px) {
+	.accordion-list-item:hover .accordion-list-item__content, .accordion-list-item:focus .accordion-list-item__content {
+	  height: 250px;
+	}
+}
+.accordion-list-item:hover .accordion-list-item__content img, .accordion-list-item:focus .accordion-list-item__content img {
+	transition: all 0.3s ease 0s;
 	height: 300px;
+}
+@media (max-width: 600px) {
+	.accordion-list-item:hover .accordion-list-item__content img, .accordion-list-item:focus .accordion-list-item__content img {
+	  height: 250px;
+	}
 }
 .accordion-list-item__divider {
 	width: 100%;
 	height: 1px;
 	background-color: gray;
 }
- .accordion-list-item__title {
+.accordion-list-item__title {
 	padding: 15px 0px;
 	font-size: 20px;
 }
- .accordion-list-item__content {
-	width: 0;
-	height: 0;
+@media (max-width: 600px) {
+	.accordion-list-item__title {
+	  font-size: 18px;
+	}
 }
- .accordion-list-item__content img {
-	width: 0px;
+@media (max-width: 480px) {
+	.accordion-list-item__title {
+	  padding: 12px 0;
+	  font-size: 15px;
+	}
+}
+.accordion-list-item__content {
+	transition: all 0.3s ease 0s;
+	width: 300px;
 	height: 0px;
+}
+@media (max-width: 600px) {
+	.accordion-list-item__content {
+	  width: 250px;
+	}
+}
+.accordion-list-item__content img {
+	width: 300px;
+	height: 0px;
+}
+@media (max-width: 600px) {
+	.accordion-list-item__content img {
+	  width: 250px;
+	}
 }
