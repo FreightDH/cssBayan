@@ -196,16 +196,17 @@ body {
     	height: 12.5rem;
   	}
 }
-.accordion-list-item:hover {
-  	cursor: pointer;
-}
 .accordion-list-item:hover .accordion-list-item__content {
+	cursor: pointer;
   	background: url("../assets/svg/cross.svg") right 0.625rem/2rem 2rem no-repeat;
 }
 @media (max-width: 480px) {
   	.accordion-list-item:hover .accordion-list-item__content {
     	background: url("../assets/svg/cross.svg") right 0.5rem/1.5625rem 1.5625rem no-repeat;
   	}
+}
+.accordion-list-item:active .accordion-list-item__content {
+	cursor: progress;
 }
 .accordion-list-item__divider {
   	width: 100%;
@@ -234,6 +235,9 @@ body {
   	width: 18.75rem;
   	height: 0px;
   	margin: 0px auto;
+}
+.accordion-list-item__content img:hover {
+	transform: scale(0.9);
 }
 @media (max-width: 600px) {
   	.accordion-list-item__content img {
